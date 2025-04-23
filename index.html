@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gana 24/7 | Casino</title>
+  <link rel="icon" href="jokers-jewels-logo.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Rubik', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(-45deg, #1a1a1d, #3a0ca3, #4361ee, #7209b7);
+      background-size: 400% 400%;
+      animation: gradientBG 10s ease infinite;
+      color: #ffffff;
+    }
+
+    @keyframes gradientBG {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('casino_1(1).jpg') no-repeat center center/cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+    .hero h1 {
+      font-size: 3em;
+      max-width: 800px;
+      line-height: 1.2;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 1.2em;
+      margin-bottom: 30px;
+      color: #e0e0e0;
+    }
+
+    .cta-button {
+      background: #03dac6;
+      color: #000;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 18px 36px;
+      border-radius: 8px;
+      font-size: 2.2em;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 20px rgba(3, 218, 198, 0.6);
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .cta-button i {
+      margin-right: 12px;
+      font-size: 1.5em;
+    }
+
+    .cta-button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 30px rgba(3, 218, 198, 1);
+    }
+
+    .info {
+      background: rgba(0, 0, 0, 0.4);
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .info h2 {
+      font-size: 2em;
+      color: #03dac6;
+      margin-bottom: 15px;
+    }
+
+    .info p {
+      font-size: 1.1em;
+      color: #f0f0f0;
+      margin: 8px 0;
+    }
+
+        @media (max-width: 900px) {
+            .hero {
+                background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('casino_mobile1.jpg') no-repeat center center/cover;
+            }
+            .cta-button {
+                font-size: 1.5em;
+                padding: 20px 24px;
+            }
+        
+            .cta-button i {
+                font-size: 1.5em; /* Reduce el tamaño del icono de WhatsApp */
+                margin-right: 10px;
+            }
+            .hero h1 {
+                font-size: 2em; /* Reduce el tamaño del título */
+            }
+        
+            .hero p {
+                font-size: 1em; /* Reduce el tamaño del párrafo */
+            }
+        }
+  </style>
+
+  <!-- PÍXEL META + CONVERSIONES (igual que original) -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '...');
+    fbq('track', 'PageView');
+  </script>
+  <noscript>
+    <img height="1" width="1" src="https://www.facebook.com/tr?id=...&ev=PageView&noscript=1"/>
+  </noscript>
+
+  <script>
+    const accessToken = "...";
+    const pixelId = "...";
+    const conversionValue = 5.00;
+    const currency = "ARS";
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const whatsappButton = document.querySelector('.cta-button');
+
+      if (whatsappButton) {
+        whatsappButton.addEventListener('click', function () {
+          const eventos = ["Comprar", "Cliente potencial"];
+          const eventoSeleccionado = eventos[Math.floor(Math.random() * eventos.length)];
+
+          fbq('track', eventoSeleccionado, {
+            content_name: 'Clic en botón WhatsApp',
+            content_category: 'Interacción'
+          });
+
+          fetch(`https://graph.facebook.com/v18.0/${pixelId}/events`, {
+            method: "POST",
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify({
+              data: [{
+                event_name: eventoSeleccionado,
+                event_time: Math.floor(Date.now() / 1000),
+                action_source: "website",
+                event_source_url: window.location.href,
+                event_id: Math.random().toString(36).substring(2, 15),
+                user_data: { client_user_agent: navigator.userAgent },
+                custom_data: { value: conversionValue, currency: currency }
+              }],
+              access_token: accessToken
+            })
+          })
+          .then(res => res.json())
+          .then(data => console.log("API Conversiones:", data))
+          .catch(error => console.error("Error:", error));
+        });
+      }
+    });
+  </script>
+</head>
+<body>
+  <section class="hero">
+    <h1>¡Juega con nosotros las 24h y multiplicá tus chances!</h1>
+    <p>Creá tu cuenta enviándonos un WhatsApp. ¡Es fácil y rápido!</p>
+    <a href="https://api.whatsapp.com/send?phone=5491130550463&text=¡Buenas!%20Me%20gustaría%20crear%20un%20usuario.%20Mi%20nombre%20es:" class="cta-button" target="_blank">
+      <i class="fab fa-whatsapp"></i> Crear mi usuario
+    </a>
+  </section>
+
+  <section class="info">
+    <h2>🎁 Bonos Exclusivos</h2>
+    <p>Bonos de bienvenida, recargas y promociones diarias.</p>
+    <p>Carga mínima: $2000</p>
+  </section>
+</body>
+</html>
