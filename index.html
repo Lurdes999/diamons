@@ -1,32 +1,25 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Gana 24/7 | Casino</title>
-  <link rel="icon" href="jokers-jewels-logo.ico" type="image/x-icon" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap" rel="stylesheet" />
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: 'Rubik', sans-serif;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casino Diamante, ¡Juga y Gana YA!</title>
+    <link rel="icon" href="logo-diamante.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
 
-    body {
-      background: linear-gradient(-45deg, #1a1a1d, #3a0ca3, #4361ee, #7209b7);
-      background-size: 400% 400%;
-      animation: gradientBG 10s ease infinite;
-      color: #ffffff;
-    }
-
-    @keyframes gradientBG {
-      0% {background-position: 0% 50%;}
-      50% {background-position: 100% 50%;}
-      100% {background-position: 0% 50%;}
-    }
+        body {
+            background-color: #121212;
+            color: #fff;
+            text-align: center;
+        }
 
         .hero {
             height: 100vh;
@@ -38,65 +31,76 @@
             padding: 20px;
         }
 
-    .hero h1 {
-      font-size: 3em;
-      max-width: 800px;
-      line-height: 1.2;
-      font-weight: 600;
-      margin-bottom: 20px;
-    }
+        .hero h1 {
+            font-size: 4em;
+            font-weight: bold;
+            color: #ffb800;
+            text-shadow: 2px 2px 10px rgba(255, 215, 0, 0.8);
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        .hero h2 {
+            font-size: 3em;
+            font-weight: bold;
+            color: #ffb800;
+            text-shadow: 2px 2px 10px rgba(255, 215, 0, 0.8);
+            animation: fadeIn 1.5s ease-in-out;
+            margin-top: 10px;
+        }
 
-    .hero p {
-      font-size: 1.2em;
-      margin-bottom: 30px;
-      color: #e0e0e0;
-    }
+        .hero p {
+            font-size: 1.2em;
+            margin: 15px 0;
+            animation: fadeIn 2s ease-in-out;
+        }
 
-    .cta-button {
-      background: #03dac6;
-      color: #000;
-      text-decoration: none;
-      font-weight: bold;
-      padding: 18px 36px;
-      border-radius: 8px;
-      font-size: 2.2em;
-      transition: all 0.3s ease;
-      box-shadow: 0 0 20px rgba(3, 218, 198, 0.6);
-      display: inline-flex;
-      align-items: center;
-    }
+        .cta-button {
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, #38ff00, #c6ff00, #38ff00);
+            color: #fff;
+            padding: 20px 40px;
+            border-radius: 10px;
+            font-size: 1.5em;
+            font-weight: bold;
+            text-decoration: none;
+            box-shadow: 0 0 18px #38ff00;
+            transition: transform 0.3s, box-shadow 0.3s;
+            animation: fadeIn 2.5s ease-in-out;
+        }
 
-    .cta-button i {
-      margin-right: 12px;
-      font-size: 1.5em;
-    }
+        .cta-button i {
+            margin-right: 15px;
+            font-size: 1.8em;
+        }
 
-    .cta-button:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 30px rgba(3, 218, 198, 1);
-    }
+        .cta-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 30px rgb(56 255 0);
+        }
 
-    .info {
-      background: rgba(0, 0, 0, 0.4);
-      padding: 50px 20px;
-      text-align: center;
-    }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
 
-    .info h2 {
-      font-size: 2em;
-      color: #03dac6;
-      margin-bottom: 15px;
-    }
+        .info {
+            background: #1a1a1a;
+            padding: 50px 20px;
+        }
 
-    .info p {
-      font-size: 1.1em;
-      color: #f0f0f0;
-      margin: 8px 0;
-    }
+        .info h2 {
+            font-size: 2em;
+            color: #38ff00;
+        }
+
+        .info p {
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
 
         @media (max-width: 900px) {
             .hero {
-                background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('casino_mobile1.jpg') no-repeat center center/cover;
+                background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('JokerCrazy_mobile.jpg') no-repeat center center/cover;
             }
             .cta-button {
                 font-size: 1.5em;
@@ -115,10 +119,11 @@
                 font-size: 1em; /* Reduce el tamaño del párrafo */
             }
         }
-  </style>
 
-  <!-- PÍXEL META + CONVERSIONES (igual que original) -->
-  <script>
+    </style>
+
+    <!-- Meta Pixel Code -->
+    <script>
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
     n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -127,16 +132,16 @@
     t.src=v;s=b.getElementsByTagName(e)[0];
     s.parentNode.insertBefore(t,s)}(window, document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '...');
+    fbq('init', '1601784203862134');
     fbq('track', 'PageView');
   </script>
   <noscript>
-    <img height="1" width="1" src="https://www.facebook.com/tr?id=...&ev=PageView&noscript=1"/>
+    <img height="1" width="1" src="https://www.facebook.com/tr?id=1601784203862134&ev=PageView&noscript=1"/>
   </noscript>
 
   <script>
-    const accessToken = "...";
-    const pixelId = "...";
+    const accessToken = "EAAoe6urdLAYBOzkXP38mkOEo9nIC74PFcUBDrWuLAIWH41v7qhYmQyUJZAoaZBKS0q3dZBAPDIiEBqy5dYZAXe49XnOjZAjdZBhXeyqFS8TxQxgXQnUOsgSh5GAYjfmrfpZCHZBPfw1nP2wJDU9ICFoMvePwwuXnlXhsoHkhhLICjVnMqvzpPKdIZAOoa0L6SRWUpuQZDZD";
+    const pixelId = "1601784203862134";
     const conversionValue = 5.00;
     const currency = "ARS";
 
@@ -176,20 +181,23 @@
       }
     });
   </script>
+
 </head>
 <body>
-  <section class="hero">
-    <h1>¡Juega con nosotros las 24h y multiplicá tus chances!</h1>
-    <p>Creá tu cuenta enviándonos un WhatsApp. ¡Es fácil y rápido!</p>
-    <a href="https://api.whatsapp.com/send?phone=5491130550463&text=¡Buenas!%20Me%20gustaría%20crear%20un%20usuario.%20Mi%20nombre%20es:" class="cta-button" target="_blank">
-      <i class="fab fa-whatsapp"></i> Crear mi usuario
-    </a>
-  </section>
-
-  <section class="info">
-    <h2>🎁 Bonos Exclusivos</h2>
-    <p>Bonos de bienvenida, recargas y promociones diarias.</p>
-    <p>Carga mínima: $2000</p>
-  </section>
+    <section class="hero">
+        <h1>¡Sin Límites De Pago!</h1>
+        <h1>¡Jugalo antes que nadie, ya disponible en Ganemos.net!</h1>
+        <p>Para crear tu cuenta, envíanos un WhatsApp haciendo click en el botón de abajo</p>
+        <a href="https://api.whatsapp.com/send?phone=5491126115649&text=¡Buenas!%20Me%20gustaría%20crear%20un%20usuario.%20Mi%20nombre%20es:" 
+           class="cta-button" target="_blank">
+            <i class='fab fa-whatsapp'></i> ¡Crea tu usuario!
+        </a>
+        <h2>Las 24 hs a tu servicio</h2>
+    </section>
+    <section class="info">
+        <h2>Beneficios Exclusivos</h2>
+        <p>Recibe bonos de bienvenida y promociones especiales.</p>
+        <p>Mínimo de carga: $3000</p>
+    </section>
 </body>
 </html>
