@@ -160,14 +160,15 @@
     fbq('track', 'PageView');
   </script>
   <noscript>
-    <img height="1" width="1" src="https://www.facebook.com/tr?id=24201504672821604&ev=PageView&noscript=1" />
+    <img height="1" width="1"
+      src="https://www.facebook.com/tr?id=24201504672821604&ev=PageView&noscript=1" />
   </noscript>
 
   <!-- Evento personalizado y CAPI -->
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       const whatsappButton = document.querySelector('.cta-button');
-      
+
       if (whatsappButton) {
         whatsappButton.addEventListener('click', function () {
           const evento = "Purchase";
@@ -198,6 +199,7 @@
       }
     });
   </script>
+
 </head>
 
 <body>
