@@ -1,7 +1,7 @@
 <?php
 // --- CONFIGURACIÓN ---
-$access_token = 'EAAOdyg3KzowBO2i9XtRChyrMrz6BTv586kXzLZAJ8MwE0hYp5mHZAasSdg4Ynehe71kxo05kZAtwWFnzIL3r55LZALxZAAeI3eSlT0UFNGbcGdmLanNChzxZBJuDbUitckQyOefAZCLGSOBLHXlZClnu1PwxSUPoRPKLYytgpEPEYC21G7fot4DGV9kdY9030ZAYaZBgZDZD';
-$pixel_id = '712102954779554';
+$access_token = 'EAAOdyg3KzowBPDuZBtgG9XdY57IXS8zcOGClfjWOFZBljoFEiiq8uUFkZC0t0Rz5Cnm6Alas2dZCZCoU3j2nFPs4x2MMbCR9OcFZAwKPQR9xSexIrZChKDM9EhwMBoH5d2YkREwZBRKlXBzqmE8vsYn7yqw2WOXLrMM6cp8r9anUosFo3ZAFqosDL1VT6wX0E27vskAZDZD';
+$pixel_id = '24201504672821604';
 
 // Obtener datos enviados por el frontend
 $data_json = file_get_contents("php://input");
