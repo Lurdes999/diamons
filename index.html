@@ -146,7 +146,9 @@
   t.src=v;s=b.getElementsByTagName(e)[0];
   s.parentNode.insertBefore(t,s)}(window, document,'script',
   'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '4249756885241064'); 
+  fbq('init', '4249756885241064', {
+    em: 'email@email.com',
+    ph: '1234567890'});
   fbq('track', 'PageView');
 </script>
 <noscript>
